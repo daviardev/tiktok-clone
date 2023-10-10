@@ -1,3 +1,10 @@
 @tailwind base;
 @tailwind utilities;
 @tailwind components;
+
+@layer base {
+    /* List style */
+    .list {
+        @apply flex items-center w-full pl-4 pr-2 py-2.5 justify-start cursor-pointer hover:bg-gray-100;
+    }
+}
