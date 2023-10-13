@@ -2,6 +2,47 @@
 @tailwind utilities;
 @tailwind components;
 
+@font-face {
+    font-family: 'TikTokFont';
+    src: url(/font/TikTokFont-Bold.woff2) format('woff2');
+    font-weight: 700;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'TikTokFont';
+    src: url(/font/TikTokFont-Regular.woff2) format('woff2');
+    font-weight: 500;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'TikTokFont';
+    src: url(/font/TikTokFont-Semibold.woff2) format('woff2');
+    font-weight: 600;
+    font-style: normal;
+    font-display: swap;
+}
+
+::-webkit-scrollbar {
+    width: 6px;
+}
+
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #20182308;
+}
+
+html {
+    font-family: 'TikTokFont', system-ui, sans-serif;
+    scroll-behavior: smooth;
+}
+
 @layer base {
     /* List style */
     .list {
