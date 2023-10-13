@@ -1,4 +1,4 @@
-import { usePathname, useRouter } from 'next/navigation'
+import { usePathname } from 'next/navigation'
 
 import { FiLogOut } from 'react-icons/fi'
 import { AiOutlinePlus } from 'react-icons/ai'
@@ -21,8 +21,8 @@ export default function NavBar () {
 
   return (
     <>
-      <div className='fixed bg-white z-30 flex items-center w-full border-b h-[60px]'>
-        <div className={`flex items-center justify-between w-full px-6 mx-auto ${path === '/' ? 'max-w-[100%]' : ''}`}>
+      <header className='fixed bg-white z-30 flex items-center w-full border-b h-[60px]'>
+        <nav className={`flex items-center justify-between w-full px-6 mx-auto ${path === '/' ? 'max-w-[100%]' : ''}`}>
 
           <div className='flex items-center lg:min-w-[300px]'>
             <Link href='/'>
@@ -142,8 +142,8 @@ export default function NavBar () {
                 </div>
                 )}
           </div>
-        </div>
-      </div>
+        </nav>
+      </header>
     </>
   )
 }
