@@ -1,4 +1,4 @@
-import { usePathname } from 'next/navigation'
+import { usePathname, useRouter } from 'next/navigation'
 
 import { FiLogOut } from 'react-icons/fi'
 import { AiOutlinePlus } from 'react-icons/ai'
@@ -9,6 +9,7 @@ import Image from 'next/image'
 import Link from 'next/link'
 
 export default function NavBar () {
+  const router = useRouter()
   const path = usePathname()
 
   const handleSearchUser = event => {
@@ -16,7 +17,7 @@ export default function NavBar () {
   }
 
   const goTo = () => {
-    window.alert('Free')
+    router.push('/upload')
   }
 
   return (
@@ -88,7 +89,7 @@ export default function NavBar () {
               </span>
             </button>
 
-            {!true
+            {true
               ? (
                 <div className='flex items-center'>
                   <button className='flex items-center bg-[#f02c56] text-white border rounded-md px-0 py-[6px]'>
