@@ -2,6 +2,7 @@
 
 import { useState } from 'react'
 import Island from './components/Island'
+import FeedVideos from './components/FeedVideos'
 
 export default function Home () {
   const [loading, setLoading] = useState(false)
@@ -21,11 +22,11 @@ export default function Home () {
   }
   return (
     <>
-      {/* <FeedVideos /> */}
+      <FeedVideos />
       <Island
         loading={loading}
         completed={completed}
-        information='El video se subio'
+        information='The video has upload'
       />
 
       <button
