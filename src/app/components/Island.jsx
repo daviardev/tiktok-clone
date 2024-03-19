@@ -52,14 +52,16 @@ export default function Island ({ loading, completed, information }) {
       style={GetStyle()}
     >
       {state === 'loading' && (
-        <div className='flex justify-between'>
-          <img
-            src='../favicon.ico'
-            alt='TikTok Logo'
-            className='rounded-full my-0.5'
-            width={20}
-            height={90}
-          />
+        <div className='flex justify-between animate-fade-in'>
+          <div>
+            <img
+              src='../favicon.ico'
+              alt='TikTok Logo'
+              className='rounded-full my-0.5'
+              width={20}
+              height={90}
+            />
+          </div>
           <div class='flex justify-center items-center'>
             <Spin />
           </div>
@@ -67,7 +69,7 @@ export default function Island ({ loading, completed, information }) {
       )}
 
       {state === 'completed' && (
-        <div className='flex justify-between'>
+        <div className='relative animate-fade-in'>
           <div className='flex pl-1 items-center'>
             <img
               src='../favicon.ico'
