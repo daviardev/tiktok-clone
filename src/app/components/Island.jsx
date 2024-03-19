@@ -21,7 +21,7 @@ export default function Island ({ loading, completed, information }) {
         setTimeout(() => {
           setState('inactive')
         }, 0)
-      }, 2000)
+      }, 1500)
     } else {
       setState('inactive')
     }
@@ -53,15 +53,13 @@ export default function Island ({ loading, completed, information }) {
     >
       {state === 'loading' && (
         <div className='flex justify-between'>
-          <div>
-            <img
-              src='../favicon.ico'
-              alt='TikTok Logo'
-              className='rounded-full my-0.5'
-              width={20}
-              height={90}
-            />
-          </div>
+          <img
+            src='../favicon.ico'
+            alt='TikTok Logo'
+            className='rounded-full my-0.5'
+            width={20}
+            height={90}
+          />
           <div class='flex justify-center items-center'>
             <Spin />
           </div>
@@ -69,25 +67,23 @@ export default function Island ({ loading, completed, information }) {
       )}
 
       {state === 'completed' && (
-        <div className='relative'>
+        <div className='flex justify-between'>
           <div className='flex pl-1 items-center'>
-            <div className='flex items-center'>
-              <img
-                src='../favicon.ico'
-                alt='TikTok Logo'
-                className='rounded-full my-2'
-                width={43}
-                height={43}
-              />
-              <div className='flex flex-col items-start ml-2'>
-                <span className='text-[#6c6c6c] text-xs font-bold'>TikTok</span>
-                <span className='text-white text-xs mt-[3px] -mb-2 overflow-hidden overflow-ellipsis'>{information}</span>
-              </div>
-              <div className='absolute top-3 right-4 flex items-center'>
-                <span className='bg-green-300/20 text-green-300 rounded-full h-9 w-9 flex justify-center items-center'>
-                  <FaCheck />
-                </span>
-              </div>
+            <img
+              src='../favicon.ico'
+              alt='TikTok Logo'
+              className='rounded-full my-2'
+              width={43}
+              height={43}
+            />
+            <div className='flex flex-col items-start ml-2'>
+              <span className='text-[#6c6c6c] text-xs font-bold'>TikTok</span>
+              <span className='text-white text-xs mt-[3px] -mb-2 overflow-hidden overflow-ellipsis'>{information}</span>
+            </div>
+            <div className='absolute top-3 right-4 flex items-center'>
+              <span className='bg-green-300/20 text-green-300 rounded-full h-9 w-9 flex justify-center items-center'>
+                <FaCheck />
+              </span>
             </div>
           </div>
         </div>
