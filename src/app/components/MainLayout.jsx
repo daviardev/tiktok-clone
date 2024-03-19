@@ -1,12 +1,9 @@
 export default function MainLayout ({ children }) {
   return (
     <>
-      <div className='box'>
-        <div className='inner'>
-          <div className='island' />
-          {children}
-        </div>
-      </div>
+      <main className='flex justify-center items-center h-screen bg-white'>
+        {children}
+      </main>
     </>
   )
 }
