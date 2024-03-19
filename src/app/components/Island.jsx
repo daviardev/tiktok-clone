@@ -52,7 +52,7 @@ export default function Island ({ loading, completed, information }) {
       style={GetStyle()}
     >
       {state === 'loading' && (
-        <div className='flex justify-between'>
+        <div className='flex justify-between animate-fade-in'>
           <div>
             <img
               src='../favicon.ico'
@@ -69,7 +69,7 @@ export default function Island ({ loading, completed, information }) {
       )}
 
       {state === 'completed' && (
-        <div className='relative'>
+        <div className='relative animate-fade-in'>
           <div className='flex pl-1 items-center'>
             <div className='flex items-center'>
               <img
