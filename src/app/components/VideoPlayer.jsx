@@ -20,25 +20,27 @@ export default function VideoPlayer ({ src }) {
 
   return (
     <>
-      <video
-        src={src}
-        controls={false}
-        ref={video}
-        loop
-        className='w-full h-full rounded-xl'
-      />
-      <button
-        className='w-16 h-16 absolute m-auto border-0 inset-0'
-        style={{
-          backgroundImage: 'url(/images/player.png)',
-          backgroundSize: 'contain',
-          backgroundColor: 'transparent',
-          backgroundRepeat: 'no-repeat',
-          backgroundPosition: 'center center'
-        }}
-        onClick={HandlePlay}
-      />
-      <VideoPlayerActions />
+      <div className='video'>
+        <video
+          src={src}
+          controls={false}
+          ref={video}
+          loop
+          className='w-full h-full rounded-xl object-cover'
+        />
+        <button
+          className='w-16 h-16 absolute m-auto border-0 inset-0'
+          style={{
+            backgroundImage: 'url(/images/player.png)',
+            backgroundSize: 'contain',
+            backgroundColor: 'transparent',
+            backgroundRepeat: 'no-repeat',
+            backgroundPosition: 'center center'
+          }}
+          onClick={HandlePlay}
+        />
+        <VideoPlayerActions />
+      </div>
     </>
   )
 }

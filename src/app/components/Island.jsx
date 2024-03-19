@@ -21,7 +21,7 @@ export default function Island ({ loading, completed, information }) {
         setTimeout(() => {
           setState('inactive')
         }, 0)
-      }, 1500)
+      }, 2000)
     } else {
       setState('inactive')
     }
@@ -57,7 +57,7 @@ export default function Island ({ loading, completed, information }) {
             <img
               src='../favicon.ico'
               alt='TikTok Logo'
-              className='rounded-full my-0.5'
+              className='rounded-full my-[3px]'
               width={20}
               height={90}
             />
