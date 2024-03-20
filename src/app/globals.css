@@ -109,3 +109,13 @@ body {
   background-color: white;
   scroll-snap-align: start;
 }
+
+.appVideos {
+  @apply relative w-[300px] h-[600px] ml-[47px] overflow-scroll max-w-[500px] snap-y snap-mandatory;
+  scrollbar-width: none;
+  border-radius: 20px 20px 0 0;
+
+  &::-webkit-scrollbar {
+    display: none;
+  }
+}
