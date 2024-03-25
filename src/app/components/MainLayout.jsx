@@ -1,9 +1,8 @@
 export default function MainLayout ({ children }) {
   return (
     <>
-      <div className='box'>
-        <div className='inner'>
-          <div className='island' />
+      <div className='h-screen bg-black grid place-items-center'>
+        <div className='container'>
           {children}
         </div>
       </div>

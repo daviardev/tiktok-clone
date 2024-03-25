@@ -27,18 +27,23 @@
 }
 
 
-body, html {
+html {
   font-family: 'TikTokFont', system-ui, sans-serif;
+  scroll-snap-type: y mandatory;
 }
 
-body {
-  height: 100vh;
-  display: flex;
-  overflow: hidden;
-  background: #000;
-  align-items: center;
-  flex-direction: column;
-  justify-content: center;
+.container {
+  @apply relative h-[600px] w-[300px] rounded-3xl overflow-scroll;
+  scroll-snap-type: y mandatory;
+  scrollbar-width: none;
+  border: 2px solid white;
+  -ms-overflow-style: none;
+  background-size: contain;
+  background: url(/images/iphone.png) no-repeat;
+
+  &::-webkit-scrollbar {
+    display: none;
+  }
 }
 
 .box {
