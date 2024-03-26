@@ -26,49 +26,30 @@
   font-display: swap;
 }
 
-
 html {
-  font-family: 'TikTokFont', system-ui, sans-serif;
   scroll-snap-type: y mandatory;
 }
 
-.container {
-  @apply relative h-[600px] w-[300px] rounded-3xl overflow-scroll;
-  scroll-snap-type: y mandatory;
+body {
+  display: grid;
+  overflow: hidden;
+  min-height: 100vh;
+  background: #e5e5e5;
+  user-select: none;
+  font-family: 'TikTokFont', system-ui, sans-serif;
+  place-content: center;
+  
   scrollbar-width: none;
-  border: 2px solid white;
+  scroll-snap-type: y mandatory;
   -ms-overflow-style: none;
-  background-size: contain;
-  background: url(/images/iphone.png) no-repeat;
 
   &::-webkit-scrollbar {
     display: none;
   }
 }
 
-.box {
-  width: 300px;
-  height: 600px;
-  position: relative;
-  background: #666;
-  border-radius: 50px;
-
-  &::before {
-    content: '';
-    inset: 3px;
-    position: absolute;
-    background: white;
-    border-radius: 48px;
-  }
-}
-
-.inner {
-  inset: 3px;
-  border: 10px solid black;
-  display: flex;
-  justify-content: center;
-  position: absolute;
-  border-radius: 48px;
+.shadow-filter {
+  filter: drop-shadow(0 0 10px rgba(0, 0, 0, 0.3));
 }
 
 .island {
