@@ -5,7 +5,7 @@ import { Home, Friends, Upload, Inbox, Profile } from './Svg'
 export default function Footer () {
   return (
     <>
-      <div className='sticky -bottom-4 left-0 bg-white w-full py-2 px-3 mt-1 text-xs'>
+      <div className='w-full justify-evenly text-sm text-black bg-white rounded-full p-2 gap-5 bottom-0'>
         <div className='flex justify-between items-center'>
           <Link href='/'>
             <div className='flex flex-col items-center'>
