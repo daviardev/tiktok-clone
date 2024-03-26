@@ -35,7 +35,6 @@ body {
   overflow: hidden;
   min-height: 100vh;
   background: #e5e5e5;
-  user-select: none;
   font-family: 'TikTokFont', system-ui, sans-serif;
   place-content: center;
   
