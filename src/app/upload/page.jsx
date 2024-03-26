@@ -17,9 +17,32 @@ export default function Upload () {
     if (files && files.length > 0) {
       const file = files[0]
       const fileURL = URL.createObjectURL(file)
-      setFileDisplay(fileURL)
+      setFileDisplay({ name: file.name, url: fileURL })
       setFile(file)
     }
+  }
+
+  const HandleDrop = e => {
+    e.preventDefault()
+
+    const file = e.dataTransfer.files[0]
+    if (file) {
+      const fileUrl = URL.createObjectURL(file)
+      setFileDisplay({ name: file.name, url: fileUrl })
+      setFile(file)
+    }
+  }
+
+  const HandleDragOver = e => {
+    e.preventDefault()
+  }
+
+  const HandleDragEnter = e => {
+    e.preventDefault()
+  }
+
+  const HandleDragLeave = e => {
+    e.preventDefault()
   }
 
   const Discard = () => {
@@ -47,6 +70,10 @@ export default function Upload () {
           ? (
             <label
               htmlFor='fileInput'
+              onDrop={HandleDrop}
+              onDragOver={HandleDragOver}
+              onDragEnter={HandleDragEnter}
+              onDragLeave={HandleDragLeave}
               className='
                     flex
                     flex-row
@@ -93,7 +120,7 @@ export default function Upload () {
                 id='fileInput'
                 type='file'
                 hidden
-                accept='.mp4'
+                accept='video/*'
                 onChange={OnChange}
               />
             </label>
