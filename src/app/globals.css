@@ -32,7 +32,6 @@ html {
 
 body {
   display: grid;
-  overflow: hidden;
   min-height: 100vh;
   background: #e5e5e5;
   font-family: 'TikTokFont', system-ui, sans-serif;

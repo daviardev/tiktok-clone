@@ -270,7 +270,7 @@ export const Spin = props => {
     <svg
       xmlns='http://www.w3.org/2000/svg'
       fill='none'
-      aria-hidden='true'
+      ariaHidden='true'
       className='inline px-1 w-6 h-6 text-gray-200 animate-spin fill-blue-600'
       viewBox='0 0 100 101'
       {...props}
